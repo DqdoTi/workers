@@ -4,7 +4,7 @@
 int health=INIT_WRKR_HEALTH;
 //pthread_t threads[100];
 node* workers_ls=NULL;
-int num_wrkrs= INIT_NUM_WORKERS;
+long num_wrkrs= INIT_NUM_WORKERS;
 pthread_attr_t attr;
 void createWorker(void);
 void wound_worker(int i);
