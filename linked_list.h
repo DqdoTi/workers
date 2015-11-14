@@ -5,9 +5,9 @@
 #include <stdio.h>
 
 typedef struct node {
-  void *next;
-  void *prev;
-  void* data;
+    void *next;
+    void *prev;
+    void* data;
 } node;
 
 

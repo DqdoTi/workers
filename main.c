@@ -5,11 +5,11 @@
 
 int main(int argc, char *argv[])
 {
-  game_manager();
+    game_manager();
 
 
-getchar();
-  pthread_exit (NULL);
+    getchar();
+    pthread_exit (NULL);
 
     return 0;
 }
