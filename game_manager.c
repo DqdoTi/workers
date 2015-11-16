@@ -1,5 +1,5 @@
 #include "game_manager.h"
-#define INIT_WRKR_HEALTH 3
+
 
 int health=INIT_WRKR_HEALTH;
 //pthread_t threads[100];
@@ -25,7 +25,10 @@ void game_manager()
 
     pthread_attr_init(&attr);
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
-    pthread_t res_watch;
+
+    pthread_t chess_board;
+      pthread_create(&chess_board, &attr, chess_board_t, (void *)t1);
+    /*pthread_t res_watch;
     pthread_create(&res_watch, &attr, watch_resources, (void *)t1);
 
 
@@ -72,7 +75,9 @@ void game_manager()
 
         pthread_join(get_worker_at(workers_ls,i)->thread,NULL);
     }
-    printf ("Created %d workers. Remaining resources = %d. Gathered resources = %d. Done.\n",
+    */
+      pthread_join(chess_board,NULL);
+    printf ("Created %ld workers. Remaining resources = %d. Gathered resources = %d. Done.\n",
             num_wrkrs, remaining_resources,gathered_resources);
     getchar();
     pthread_attr_destroy(&attr);

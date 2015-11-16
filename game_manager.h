@@ -11,6 +11,7 @@
 #include "worker.h"
 #include "resource_watcher.h"
 #include "workers_list.h"
+#include "chess_board.h"
 
 extern int remaining_resources ;
 extern int gathered_resources ;
